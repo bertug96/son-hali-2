@@ -1,0 +1,30 @@
+{
+  "name": "nodee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "make-seed": "npx knex seed:make dev --knexfile ./app/knexfile.js",
+    "migrate": "npx knex migrate:latest --knexfile ./app/knexfile.js",
+    "seed": "npx knex seed:run --knexfile ./app/knexfile.js",
+    "down": "npx knex migrate:down --knexfile ./app/knexfile.js",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.95.11",
+    "node": "^16.9.1",
+    "objection": "^2.2.16",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
